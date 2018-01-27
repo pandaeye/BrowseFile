@@ -1,0 +1,7 @@
+#过滤文件
+*.pyc
+
+#过滤文件夹
+images/
+__pycache__/
+.idea/
