@@ -9,6 +9,22 @@ from chardet import detect
 m_sTxtFile = ""
 m_nCurrentPage = 0
 
+def sort_fun(str):
+    start = 0
+    end = len(str)
+    for i in range(end-1,0,-1):
+        if str[i] >= '0' and str[i] <= '9':
+            end = i
+            break
+    for i in range(end-1,0,-1):
+        if str[i] < '0' or str[i] > '9':
+            start = i+1
+            break
+    str = str[start:end+1]
+    if len(str) == 0:
+    	str = '0'
+    return int(str)
+
 def dir(rootDir):
     contentDic = {}
     listImages = []
@@ -17,6 +33,7 @@ def dir(rootDir):
     bHasImg = False
     bHasDir = False
     pathDir = os.listdir(rootDir)
+    pathDir.sort(key= sort_fun)
     for allDir in pathDir:
         path = os.path.join(rootDir, allDir)
         if os.path.isdir(path):
