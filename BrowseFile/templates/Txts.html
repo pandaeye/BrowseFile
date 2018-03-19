@@ -14,9 +14,9 @@
           {{ content }}
       </div>
       {% endautoescape %}
-      <button type="button" id="bt" onClick="clickToPage(-1)" style="width:50px;height:100px;"/>上一页</button>
-      <button type="button" id="bt" onClick="clickToPage(1)" style="width:50px;height:100px;"/>下一页</button><BR>
-      {{ PageInfo }}
+      <button type="button" id="bt" onClick="clickToPage(-1)" style="width:500px;height:100px;"/>上一页</button><BR>
+      <button type="button" id="bt" onClick="clickToPage(1)" style="width:500px;height:100px;"/>下一页</button><BR>
+      <b id="CurrentPage">{{ CurrentPage }}</b> / <b id="PageNum">{{ PageNum }}</b>
   </form>  
 </body>
 {% endblock %}

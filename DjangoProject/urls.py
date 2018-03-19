@@ -3,6 +3,7 @@ from django.contrib import admin
 from BrowseFile.view import first
 from BrowseFile.view import MarkDir
 from BrowseFile.view import OpenTxtPage
+from BrowseFile.view import SaveCooie
 
 urlpatterns = patterns('',
     # Examples:
@@ -13,4 +14,5 @@ urlpatterns = patterns('',
     (r'^$', first),
     url(r'^MarkDir$', MarkDir),
     url(r'^OpenTxtPage', OpenTxtPage),
+    url(r'^SaveCooie$', SaveCooie),
 )

@@ -14,6 +14,6 @@ def Rename(rootDir):
         print(sNewFileName)
 
 def main():
-	rootDir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'BrowseFile\\static\\images')
+	rootDir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static\\images')
 	Rename(rootDir)
 main()

@@ -10,6 +10,7 @@
 <body onload="showfirst()"> 
   <form action="" method="post">
     {% if bHasDir %}
+    		<BR>
         <BR>
         <BR>
         <BR>
@@ -24,6 +25,28 @@
         <BR>
         <BR>
         <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+		<BR>
         <BR>
         <BR>
         <BR>
@@ -38,19 +61,28 @@
         <BR>
         <BR>
     {% endif %}
-    {% for key, value in FolderAttributeDic.items %}
-        <input type="submit" name="{{ key }}" value="{{ value }}" onClick="return clickSaveCookie(this.name)" style="width:500px;height:100px;"/><BR>
+    {% for Item in FolderAttributeItems %}
+        <input type="submit" name="{{ Item.0 }}" value="{{ Item.1 }}" onClick="return clickSaveCookie(this.value)" style="{{ Item.2 }}"/><BR>
     {% endfor %}
     {% for image in ImagesList %}
         <img src="" tmp="{{ image }}" width="100%"/><BR>
     {% endfor %}
     {% for Txt in TxtList %}
-        <input type="submit" name="{{ Txt }}" value="{{ Txt }}" onClick="return clickSaveCookie(this.name)" style="width:500px;height:100px;"/><BR>
+        <input type="submit" name="{{ Txt }}" value="{{ Txt }}" onClick="return clickSaveCookie(this.name)" style="width:500px;height:100px;background-color:#00FF00"/><BR>
     {% endfor %}
     {% if bHasImg %}
         <div id="myDiv">None</div>
-        <button type="button" id="bt" tmp=" + rootDir +" onClick="clickToMark()" style="width:500px;height:100px;"/>Mark</button><BR>
+        <button type="button" id="bt" tmp="{{ rootDir }}" onClick="clickToMark()" style="width:500px;height:100px;"/>Mark</button><BR>
     {% endif %}
+    		<BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
   </form>  
 </body>
 {% endblock %}
